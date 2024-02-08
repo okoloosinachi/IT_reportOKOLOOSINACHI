@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="math.css">
+</head>
+<body>
+    <div class="mth">
+<div class="display">
+    <input type="text" name="display" class="input" >
+</div>
+  <input type="button" value="click" onclick="randomNum()" >
+</div>
+</body>
+<script>
+    let display=document.querySelector('.display');
+    let input=document.querySelector('.input');
+    function randomNum(){
+      
+    
+     let randomNum=Math.floor(Math.random()*5+1);
+     console.log(randomNum);
+     input.value=randomNum;
+    }
+
+
+</script>
+</html>

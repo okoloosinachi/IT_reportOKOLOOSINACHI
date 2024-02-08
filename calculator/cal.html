@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+    
+<div class="calculator">
+    <div class="screen">
+        <div class="inp"><input class="input" type="text"></div>
+        <div class="result"><input id="res" class="result1" type="text"></div>
+    </div>
+<div class="buttons">
+    <div class="but1">
+        <button onclick="AC()" class="but11">AC</button>
+        <button  class="but11"   onclick="backspace()"><i class='bx bx-left-arrow-alt'></i></button>
+        <button onclick="perc()" class="but11">%</button>
+        <button onclick="div()" id="but11" class="but11">/</button>
+    </div>
+    <div class="but1">
+        <button onclick="seven()" class="but11">7</button>
+        <button onclick="eight()" class="but11">8</button>
+        <button onclick="nine()" class="but11">9</button>
+        <button onclick="mul()" id="but11"  class="but11">*</button>
+    </div>
+
+    <div class="but1">
+        <button onclick="four()" class="but11">4</button>
+        <button onclick="five()" class="but11">5</button>
+        <button onclick="six()" class="but11">6</button>
+        <button onclick="sub()" id="but11"  class="but11">-</button>
+    </div>
+
+    <div class="but1">
+        <button onclick="one()" class="but11">1</button>
+        <button onclick="two()" class="but11">2</button>
+        <button onclick="three()" class="but11">3</button>
+        <button onclick="plus()" id="but11"  class="but11">+</button>
+    </div>
+    
+
+    <div class="but21">
+        <button onclick="zero()" class="but2">0</button>
+        <button  onclick="dot()" class="but22">.</button>
+        <button onclick="equ()" id="but11"  class="but11">=</button>
+    </div>
+</div>
+</div>
+
+</body>
+
+<script>
+   // let input=document.querySelector('.input');
+   // let result=document.getElementsByClassName('result1');
+
+     let input = document.querySelector('.input');
+    let result = document.querySelector('.result1');
+   
+   
+    console.log(result)
+
+    function AC(){
+      input.value="";
+     
+    }
+
+    function backspace(){
+      input.value=input.value.slice(0, -1);
+    }
+    function sub(){
+      if (input.value !== "" && !input.value.endsWith("-")){
+        input.value+="-";
+    }
+  }
+    function perc(){
+      if (input.value !== "" && !input.value.endsWith("%")) {
+            input.value += "%";
+        }
+    }
+    function div(){
+        if (input.value !== "" && !input.value.endsWith("/")) {
+            input.value += "/";
+        }
+
+      input.value+="/";
+    }
+    function mul(){
+      if (input.value !== "" && !input.value.endsWith("*")) {
+            input.value += "*";
+        }
+    }
+    function plus(){
+      if (input.value !== "" && !input.value.endsWith("+")) {
+            input.value += "+";
+        }
+    }
+    function nine(){
+      input.value+="9";
+    }
+    function eight(){
+      input.value+="8";
+    }
+    function seven(){
+      input.value+="7";
+    }
+    function six(){
+      input.value+="6";
+    }
+    function five(){
+      input.value+="5";
+    }
+    function four(){
+      input.value+="4";
+    }
+    function three(){
+      input.value+="3";
+    }
+    function two(){
+      input.value+="2";
+    }
+    function one(){
+      input.value+="1";
+    }
+    function zero(){
+      if (input.value == "0" ) {
+            input.value = "0.";
+        }
+    else if( input.value !== "0"){
+            input.value += "0";
+    }
+   
+    else{
+      input.value +="0"
+    }
+    }
+    function dot(){
+      
+      //if (input.value !== "" && input.value == "0") {
+       // if( input.value !=="" && input.value =='0'){
+      //    input.value = ".";
+            
+     //  }
+
+     if (input.value == "0" ) {
+            input.value = ".";
+        }
+    else if( input.value !== "0"){
+            input.value += ".";
+    }
+    else if( input.value == ""){
+            input.value += "";
+    }
+   
+    else{
+      input.value +="."
+    }
+
+    }
+    function equ(){
+      result.value = eval(input.value);
+      console.log(eval(input.value));
+    }
+
+</script>
+</html>

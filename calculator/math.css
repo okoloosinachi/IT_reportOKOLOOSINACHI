@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0px;
+}
+.mth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #90d8ec;
+    height: 100vh;
+}
+.display{
+    display:flex ;
+    justify-self:end;
+    background: #931717;
+    margin: 20px 0px;
+    
+
+}
